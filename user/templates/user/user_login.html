@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+  <!-- Add Tailwind CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="min-h-screen flex items-center justify-center bg-gray-100">
+    <div class="max-w-md w-full px-6 py-8 bg-white shadow-md">
+      <h2 class="text-2xl font-semibold mb-6">Login</h2>
+      <form action="" method="POST">
+        {% csrf_token %}
+        <div class="mb-4">
+          <label for="username" class="block text-gray-700 text-sm font-medium mb-2">Username:</label>
+          {{form.username}}
+        </div>
+        <div class="mb-6">
+          <label for="password" class="block text-gray-700 text-sm font-medium mb-2">Password:</label>
+          {{form.password}}
+        </div>
+        <button type="submit" class="w-full bg-indigo-500 text-white py-2 px-4 rounded-md hover:bg-indigo-600">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Add Tailwind CSS JavaScript (Optional) -->
+  <script src="https://cdn.tailwindcss.com/2.2.19/tailwind.min.js"></script>
+</body>
+</html>

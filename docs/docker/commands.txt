@@ -1,0 +1,5 @@
+docker pull mysql:8.0.33
+docker build -t botify:base .
+
+docker run --name my_mysql_container -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 -v /Users/Danish_Wani/Workspace/projects/docker_data_botif:/var/lib/mysql -d mysql:8.0.33
+docker run --name botify_container -d -p 8000:8000 --link my_mysql_container -v /Users/Danish_Wani/Workspace/projects/botify:/app botify:base
