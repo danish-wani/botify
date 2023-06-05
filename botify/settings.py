@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # custom apps
-    'chat',
+    'chat.apps.ChatConfig',
     'user',
 
     # third-party apps
